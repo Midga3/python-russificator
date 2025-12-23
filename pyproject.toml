@@ -1,0 +1,16 @@
+[project]
+name = "russificator"
+version = "0.0.1"
+authors = [
+  { name="Midga3", email="mikhaylodm@yandex.ru" },
+]
+description = "A russificator package for python"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = []
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+
+[project.urls]
+Homepage = "https://github.com/Midga3/python-russificator/"
+Issues = "https://github.com/Midga3/python-russificator/issues"
