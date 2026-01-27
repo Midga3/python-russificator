@@ -12,24 +12,27 @@ import traceback
 
 try:
     def принт(n):
-        print(n)
+        try:
+            print(n)
+        except Exception:
+            ошибка()
     def ошибка():
         exc_type, exc_value, exc_traceback = sys.exc_info()
         try:
             tb = traceback.extract_tb(exc_traceback)[0]
         except:
             tb = traceback.extract_tb(exc_traceback)[1]
-        print(f'''Ошибка {tb.filename}:
+        print(f'''{лицо()} Ошибка {tb.filename}:
     Строка {tb.lineno},
         {exc_value}
         {tb.line}''')
-    def ифравно(i1, i2, i3):
+    def еслиравно(i1, i2, i3):
         try:
             if i1 == i2:
                 exec(str(i3).replace(" и ", " and ").replace(" или ", " or ").replace(" не ", " not ").replace("если", " if "), globals())
         except Exception:
             ошибка()
-    def ифравноиначе(i1, i2, i3, i4):
+    def еслиравноиначе(i1, i2, i3, i4):
         try:
             if i1 == i2:
                 exec(str(i3).replace(" и ", " and ").replace(" или ", " or ").replace(" не ", " not ").replace("если", " if "), globals())
@@ -37,17 +40,23 @@ try:
                 exec(str(i4).replace(" и ", " and ").replace(" или ", " or ").replace(" не ", " not ").replace("если", " if "), globals())
         except Exception:
             ошибка()
-    def иф(i1, i2):
+    def если(i1, i2):
         try:
             if f"{i1}":
                 exec(str(i2).replace(" и ", " and ").replace(" или ", " or ").replace(" не ", " not ").replace("если", " if "), globals())
         except Exception:
             ошибка()
     def добавить(i1, i2):
-        i1.append(i2)
+        try:
+            i1.append(i2)
+        except Exception:
+            ошибка()
     def кол(i1):
-        return(len(i1))
-    def форрейндж(i1, i2, i3):
+        try:
+            return(len(i1))
+        except Exception:
+            ошибка()
+    def впорядке(i1, i2, i3):
         try:
             for i in range(i1, i2):
                 exec(
@@ -62,7 +71,7 @@ try:
                 )
         except Exception:
             ошибка()
-    def форин(i1, i2):
+    def взначениях(i1, i2):
         try:
             for i in i1:
                 exec(
@@ -84,52 +93,178 @@ try:
         except Exception:
             ошибка()
     def макс(i1):
-        return(max(i1))
+        try:
+            return(max(i1))
+        except Exception:
+            ошибка()
     def мин(i1):
-        return(min(i1))
+        try:
+            return(min(i1))
+        except Exception:
+            ошибка()
     def стоп():
-        exit()
+        try:
+            exit()
+        except Exception:
+            ошибка()
     def запуск(i1):
-        exec(str(i1).replace(" и ", " and ").replace(" или ", " or ").replace(" не ", " not ").replace("если", " if "), globals())
+        try:
+            exec(str(i1).replace(" и ", " and ").replace(" или ", " or ").replace(" не ", " not ").replace("если", " if "), globals())
+        except Exception:
+            ошибка()
     def ввод(i1):
-        return(input(i1))
+        try:
+            return(input(i1))
+        except Exception:
+            ошибка()
     def инт(i1):
-        return(int(i1))
+        try:
+            return(int(i1))
+        except Exception:
+            ошибка()
     def стр(i1):
-        return(str(i1))
+        try:
+            return(str(i1))
+        except Exception:
+            ошибка()
     def флоат(i1):
-        return(float(i1))
+        try:
+            return(float(i1))
+        except Exception:
+            ошибка()
     def бул(i1):
-        return(bool(i1))
+        try:
+            return(bool(i1))
+        except Exception:
+            ошибка()
     def лист(i1):
-        return(list(i1))
+        try:
+            return(list(i1))
+        except Exception:
+            ошибка()
     def словарь(i1):
-        return(dict(i1))
+        try:
+            return(dict(i1))
+        except Exception:
+            ошибка()
     def кортеж(i1):
-        return(tuple(i1))
+        try:
+            return(tuple(i1))
+        except Exception:
+            ошибка()
     def сет(i1):
-        return(set(i1))
+        try:
+            return(set(i1))
+        except Exception:
+            ошибка()
     def длина(i1):
-        return(len(i1))
+        try:
+            return(len(i1))
+        except Exception:
+            ошибка()
     def заменить(i1, i2, i3):
-        return(i1.replace(i2, i3))
+        try:
+            return(i1.replace(i2, i3))
+        except Exception:
+            ошибка()
     def импорт(i1):
-        exec(f"import {i1}", globals())
+        try:
+            exec(f"import {i1}", globals())
+        except Exception:
+            ошибка()
     def рандчисл(i1, i2):
-        return(random.randint(i1, i2))
+        try:
+            return(random.randint(i1, i2))
+        except Exception:
+            ошибка()
     def рандсписок(i1):
-        return(random.choice(i1))
+        try:
+            return(random.choice(i1))
+        except Exception:
+            ошибка()
+    def лицо() -> str:
+        try:
+            return(
+            random.choice(
+            [
+                "ヽ(๑◠ܫ◠๑)ﾉ",
+                "(◕ᴥ◕ʋ)",
+                "ᕙ(`▽´)ᕗ",
+                "(✿◠‿◠)",
+                "(▰˘◡˘▰)",
+                "(˵ ͡° ͜ʖ ͡°˵)",
+                "ʕっ•ᴥ•ʔっ",
+                "( ͡° ᴥ ͡°)",
+                "(๑•́ ヮ •̀๑)",
+                "٩(^‿^)۶",
+                "(っˆڡˆς)",
+                "ψ(｀∇´)ψ",
+                "⊙ω⊙",
+                "٩(^ᴗ^)۶",
+                "(´・ω・)っ由",
+                "( ͡~ ͜ʖ ͡°)",
+                "✧♡(◕‿◕✿)",
+                "โ๏௰๏ใ ื",
+                "∩｡• ᵕ •｡∩ ♡",
+                "(♡´౪`♡)",
+                "(◍＞◡＜◍)⋈。✧♡",
+                "╰(✿´⌣`✿)╯♡",
+                "ʕ•ᴥ•ʔ",
+                "ᶘ ◕ᴥ◕ᶅ",
+                "▼・ᴥ・▼",
+                "ฅ^•ﻌ•^ฅ",
+                "(΄◞ิ౪◟ิ‵)",
+                "٩(^ᴗ^)۶",
+                "ᕴｰᴥｰᕵ",
+                "ʕ￫ᴥ￩ʔ",
+                "ʕᵕᴥᵕʔ",
+                "ʕᵒᴥᵒʔ",
+                "ᵔᴥᵔ",
+                "(✿╹◡╹)",
+                "(๑￫ܫ￩)",
+                "ʕ·ᴥ·　ʔ",
+                "(ﾉ≧ڡ≦)",
+                "(≖ᴗ≖✿)",
+                "（〜^∇^ )〜",
+                "( ﾉ･ｪ･ )ﾉ",
+                "~( ˘▾˘~)",
+                "(〜^∇^)〜",
+                "ヽ(^ᴗ^ヽ)",
+                "(´･ω･`)",
+                "₍ᐢ•ﻌ•ᐢ₎*･ﾟ｡",
+                "(。・・)_且",
+                "(=｀ω´=)",
+                "(*•‿•*)",
+                "(*ﾟ∀ﾟ*)",
+                "(☉⋆‿⋆☉)",
+                "ɷ◡ɷ",
+                "ʘ‿ʘ",
+                "(。-ω-)ﾉ",
+                "( ･ω･)ﾉ",
+                "(=ﾟωﾟ)ﾉ",
+                "(・ε・`*) …",
+                "ʕっ•ᴥ•ʔっ",
+                "(*˘︶˘*)",
+                "ಥ_ಥ",
+                "･ﾟ･(｡>д<｡)･ﾟ･",
+                "(┬┬＿┬┬)",
+                "(◞‸◟ㆀ)",
+                " ˚‧º·(˚ ˃̣̣̥⌓˂̣̣̥ )‧º·˚",
+            ]
+        )
+            )
+        except Exception:
+            ошибка()
 ##################################################################
 # ОНЛИ ИМПОРТЫ!(я не отвечаю за превод библиотек)
 # (ОФИЦ ПОДДЕРЖКА ОНЛИ RANDOM)
 ##################################################################
     импорт("random")
 ##################################################################ы
-    M = []
-    ифравно(1, 1, '''
-a = рандчисл(0, 5)
-if a == 1 или a == 2:
-    принт("1")''')
+# END OF THE TUTORIAL
+# КОНЕЦ ТУТОРИАЛА
+
+
 ##################################################################
 # DO NOT TOUCH THIS
 ##################################################################
@@ -141,7 +276,7 @@ except:
         tb = traceback.extract_tb(exc_traceback)[-2]
     except:
         tb = traceback.extract_tb(exc_traceback)[-1]
-    print(f'''Ошибка {tb.filename}:
+    print(f'''{лицо()} Ошибка {tb.filename}:
     Строка {tb.lineno},
         {exc_value}
         {tb.line}''')
