@@ -1,25 +1,22 @@
 ##################################################################
 # MADE BY MIDGA3
+# Tutorial can be found on py.midga3.ru
 # Type from line 121
 ##################################################################
+# Туториал на сайте py.midga3.ru
 # Писать с 121 строки
+# 
 ##################################################################
 import sys
 import traceback
 
 try:
-    def принт(значение):
-        """
-        Старый добрый принт
-        """
+    def принт(n):
         try:
-            print(значение)
+            print(n)
         except Exception:
             ошибка()
     def ошибка():
-        """
-        Обработчик ошибок(WIP?) 67
-        """
         exc_type, exc_value, exc_traceback = sys.exc_info()
         try:
             tb = traceback.extract_tb(exc_traceback)[0]
@@ -29,49 +26,41 @@ try:
     Строка {tb.lineno},
         {exc_value}
         {tb.line}''')
-    def еслиравно(значение1, значение2, код):
-        """
-        Если значение1 равно значению2 выполнит код
-        """
+    def еслиравно(i1, i2, i3):
         try:
-            if значение1 == значение2:
-                exec(str(код).replace(" и ", " and ").replace(" или ", " or ").replace(" не ", " not ").replace("если", " if "), globals())
+            if i1 == i2:
+                exec(str(i3).replace(" и ", " and ").replace(" или ", " or ").replace(" не ", " not ").replace("если", " if "), globals())
         except Exception:
             ошибка()
-    def еслиравноиначе(значение1, значение2, код1, код2):
-        """
-        Если значение1 равно значению2, выполнит код1, иначе выполнит код2
-        """
+    def еслиравноиначе(i1, i2, i3, i4):
         try:
-            if значение1 == значение2:
-                exec(str(код1).replace(" и ", " and ").replace(" или ", " or ").replace(" не ", " not ").replace("если", " if "), globals())
+            if i1 == i2:
+                exec(str(i3).replace(" и ", " and ").replace(" или ", " or ").replace(" не ", " not ").replace("если", " if "), globals())
             else:
-                exec(str(код2).replace(" и ", " and ").replace(" или ", " or ").replace(" не ", " not ").replace("если", " if "), globals())
+                exec(str(i4).replace(" и ", " and ").replace(" или ", " or ").replace(" не ", " not ").replace("если", " if "), globals())
         except Exception:
             ошибка()
-    def если(значение, код):
-
+    def если(i1, i2):
         try:
-            if значение:
-                exec(str(код).replace(" и ", " and ").replace(" или ", " or ").replace(" не ", " not ").replace("если", " if "), globals())
+            if f"{i1}":
+                exec(str(i2).replace(" и ", " and ").replace(" или ", " or ").replace(" не ", " not ").replace("если", " if "), globals())
         except Exception:
             ошибка()
-    def добавить(список, значение):
-        """
-        Добавляет значение в список
-        """
+    def добавить(i1, i2):
         try:
-            список.append(значение)
+            i1.append(i2)
         except Exception:
             ошибка()
-    def впорядке(значение1, значение2, код):
-        """
-        for i in range(значение1, значение2): код
-        """
+    def кол(i1):
         try:
-            for i in range(значение1, значение2):
+            return(len(i1))
+        except Exception:
+            ошибка()
+    def впорядке(i1, i2, i3):
+        try:
+            for i in range(i1, i2):
                 exec(
-                    str(код)
+                    str(i3)
                     .replace(" и ", " and ")
                     .replace(" или ", " or ")
                     .replace(" не ", " not ")
@@ -82,14 +71,11 @@ try:
                 )
         except Exception:
             ошибка()
-    def взначениях(список, код):
-        """
-        for i in список
-        """
+    def взначениях(i1, i2):
         try:
-            for i in список:
+            for i in i1:
                 exec(
-                    str(код)
+                    str(i2)
                     .replace(" и ", " and ")
                     .replace(" или ", " or ")
                     .replace(" не ", " not ")
@@ -100,163 +86,104 @@ try:
                 )
         except Exception:
             ошибка()
-    def покаравно(значение1, значение2, код):
-        """
-        while з1 == з2: код
-        """
+    def покаравно(i1, i2, i3):
         try:
-            while значение1 == значение2:
-                exec(str(код).replace(" и ", " and ").replace(" или ", " or ").replace(" не ", " not ").replace("если", " if "), globals())
+            while i1 == i2:
+                exec(str(i3).replace(" и ", " and ").replace(" или ", " or ").replace(" не ", " not ").replace("если", " if "), globals())
         except Exception:
             ошибка()
-    def макс(список):
-        """
-        Выводит максимальное значение из списка
-        """
+    def макс(i1):
         try:
-            return(max(список))
+            return(max(i1))
         except Exception:
             ошибка()
-    def мин(список):
-        """
-        Выводит минимальное значение из списка
-        """
+    def мин(i1):
         try:
-            return(min(список))
+            return(min(i1))
         except Exception:
             ошибка()
     def стоп():
-        """
-        Стоп программа.
-        (СТОП МАШИНА!!!)
-        """
         try:
             exit()
         except Exception:
             ошибка()
-    def запуск(код):
-        """
-        exec
-        """
+    def запуск(i1):
         try:
-            exec(str(код).replace(" и ", " and ").replace(" или ", " or ").replace(" не ", " not ").replace("если", " if "), globals())
+            exec(str(i1).replace(" и ", " and ").replace(" или ", " or ").replace(" не ", " not ").replace("если", " if "), globals())
         except Exception:
             ошибка()
-    def ввод(текст = None):
-        """
-        Дает пользователю ввод с кастом текстом(необязательно)
-        """
+    def ввод(i1):
         try:
-            return(input(текст))
+            return(input(i1))
         except Exception:
             ошибка()
-    def инт(значение):
-        """
-        Превращает значение в int
-        """
+    def инт(i1):
         try:
-            return(int(значение))
+            return(int(i1))
         except Exception:
             ошибка()
-    def стр(значение):
-        """
-        Превращает значение в список
-        """
+    def стр(i1):
         try:
-            return(str(значение))
+            return(str(i1))
         except Exception:
             ошибка()
-    def флоат(значение):
-        """
-        Превращает значение в float
-        """
+    def флоат(i1):
         try:
-            return(float(значение))
+            return(float(i1))
         except Exception:
             ошибка()
-    def бул(значение):
-        """"
-        Стандартный Bool
-        """
+    def бул(i1):
         try:
-            return(bool(значение))
+            return(bool(i1))
         except Exception:
             ошибка()
-    def лист(значение = None):
-        """
-        Создает лист из значения/пустой
-        """
+    def лист(i1):
         try:
-            return(list(значение))
+            return(list(i1))
         except Exception:
             ошибка()
-    def словарь(значение = None):
-        """
-        Создает словарь из значения/пустой
-        """
+    def словарь(i1):
         try:
-            return(dict(значение))
+            return(dict(i1))
         except Exception:
             ошибка()
-    def кортеж(значение = None):
-        """
-        Создает кортеж из значение/пустой
-        """
+    def кортеж(i1):
         try:
-            return(tuple(значение))
+            return(tuple(i1))
         except Exception:
             ошибка()
-    def сет(значение = None):
-        """
-        Превращает значение в сет/создает пустой сет
-        """
+    def сет(i1):
         try:
-            return(set(значение))
+            return(set(i1))
         except Exception:
             ошибка()
-    def длина(значение):
-        """
-        Возвращает длину списка либо строки, которую вы вставите.
-        """
+    def длина(i1):
         try:
-            return(len(значение))
+            return(len(i1))
         except Exception:
             ошибка()
-    def заменить(список, значение1, значение2):
+    def заменить(i1, i2, i3):
         try:
-            return(список.replace(значение1, значение2))
+            return(i1.replace(i2, i3))
         except Exception:
             ошибка()
-    def импорт(библиотека):
-        """
-        Наш старый любимый импорт библиотек. Официальная поддержка "random"
-        """
+    def импорт(i1):
         try:
-            exec(f"import {библиотека}", globals())
+            exec(f"import {i1}", globals())
         except Exception:
             ошибка()
-    def рандчисл(число1, число2):
-        """
-        Возвращает рандомное число из ограниений.
-        """
+    def рандчисл(i1, i2):
         try:
-            return(random.randint(число1, число2))
+            return(random.randint(i1, i2))
         except Exception:
             ошибка()
-    def рандсписок(список):
-        """
-        Выбирает случайное значение из списка
-        """
+    def рандсписок(i1):
         try:
-            return(random.choice(список))
+            return(random.choice(i1))
         except Exception:
             ошибка()
     def лицо() -> str:
-        """
-        Возвращает краивое лицо с помощью ASCII арта
-        """
         try:
-            импорт("random")
             return(
             random.choice(
             [
@@ -328,75 +255,19 @@ try:
             )
         except Exception:
             ошибка()
-    def вар(функция):
-        """
-        Возвращает все возможные варианты класса/фунцкии
-        """
+    def вар(i1):
         try:
-            return dir(функция)
-        except Exception:
-            ошибка()
-    def сум(список):
-        """
-        Возвращает сумму чисел из списка Python
-        """
-        try:
-            return sum(список)
-        except Exception:
-            ошибка()
-    def срзнач(список):
-        """
-        Возвращает среднее арифмитическое из списка
-        """
-        try:
-            return sum(список)/len(список)
-        except Exception:
-            ошибка()
-    def двоич(число):
-        """
-        Возвращает число в десятичной системе
-        """
-        try:
-            return int(bin(число).split("b")[1])
-        except Exception:
-            ошибка()
-    def восмирич(число):
-        """
-        Возращает число в восьмеричной системе
-        """
-        try:
-            return int(oct(число).split("o")[1])
-        except Exception:
-            ошибка()
-    def шестнадцатирич(число):
-        """
-        Возвращает число в шестнадцатиричной системе
-        """
-        try:
-            return int(hex(число).split("x")[1])
-        except Exception:
-            ошибка()
-    def десятич(число, система):
-        """
-        Возвращает число в десятичной системе из другой системы счисления
-        """
-        try:
-            return int(str(число), система)
+            return dir(i1)
         except Exception:
             ошибка()
 ##################################################################
 # ОНЛИ ИМПОРТЫ!(я не отвечаю за превод библиотек)
 # (ОФИЦ ПОДДЕРЖКА ОНЛИ RANDOM)
-    импорт("random")
 ##################################################################
-#################################################################ы
+    импорт("random")б,О#################################################################ы
 # END OF THE TUTORIAL
 # КОНЕЦ ТУТОРИАЛА
-
-# TYPE CODE FROM HERE
-# ПИСАТЬ КОД ОТСЮДА
-
-    
+    принт(вар(принт))
 ##################################################################
 # DO NOT TOUCH THIS
 ##################################################################
